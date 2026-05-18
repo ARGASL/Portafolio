@@ -1,58 +1,73 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L. Armas Gástulo | Pathobiology Interface</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>LUCÍA ARMAS | PATHOBIOLOGY PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
-        
         :root {
             --neon-green: #39FF14;
-            --deep-green: #062b06;
-            --terminal-gray: #121212;
+            --dark-green: #062b06;
+            --bg-black: #000000;
+            --text-gray: #98FF98;
         }
 
         body {
-            background-color: #000000;
-            color: #d1d5db;
-            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--bg-black);
+            color: var(--neon-green);
+            font-family: 'Space Mono', monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 300px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 250px;
-            max-height: 250px;
-        }
-
-        .neo-border {
-            border: 1px solid var(--deep-green);
-            transition: all 0.3s ease;
-        }
-
-        .neo-border:hover {
-            border-color: var(--neon-green);
-            box-shadow: 0 0 20px rgba(57, 255, 20, 0.15);
-        }
-
-        .glow-text { text-shadow: 0 0 10px rgba(57, 255, 20, 0.7); }
-        
-        .scanline {
-            width: 100%;
-            height: 2px;
-            background: rgba(57, 255, 20, 0.05);
-            position: fixed;
+        /* --- Terminal Header --- */
+        .system-header {
+            border-bottom: 1px solid var(--neon-green);
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.8);
+            position: sticky;
             top: 0;
             z-index: 100;
-            pointer-events: none;
-            animation: scan 4s linear infinite;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            padding: 60px 10%;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .bio-scan {
+            position: relative;
+            border: 2px solid var(--neon-green);
+            padding: 5px;
+            box-shadow: 0 0 15px var(--dark-green);
+        }
+
+        .bio-scan img {
+            width: 100%;
+            display: block;
+            filter: grayscale(1) sepia(1) hue-rotate(70deg) brightness(1.2);
+        }
+
+        .scan-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--neon-green);
+            animation: scan 3s linear infinite;
+            box-shadow: 0 0 10px var(--neon-green);
         }
 
         @keyframes scan {
@@ -60,287 +75,195 @@
             100% { top: 100%; }
         }
 
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: var(--deep-green); }
-        ::-webkit-scrollbar-thumb:hover { background: var(--neon-green); }
+        .identity-text h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .headline {
+            font-size: 1.2rem;
+            color: white;
+            border-left: 3px solid var(--neon-green);
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        /* --- Research Grid --- */
+        .section-title {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--dark-green);
+            color: var(--neon-green);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 10%;
+        }
+
+        .research-card {
+            border: 1px solid var(--neon-green);
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            background: rgba(6, 43, 6, 0.1);
+        }
+
+        .research-card:hover {
+            background: var(--dark-green);
+            transform: translateY(-5px);
+        }
+
+        .research-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 1px solid var(--neon-green);
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: var(--neon-green);
+            color: black;
+            padding: 2px 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* --- Experience Section --- */
+        .experience {
+            padding: 40px 10%;
+            background: #050505;
+        }
+
+        .exp-item {
+            margin-bottom: 30px;
+            border-left: 1px dashed var(--neon-green);
+            padding-left: 20px;
+        }
+
+        /* --- Footer & Contact --- */
+        footer {
+            border-top: 1px solid var(--neon-green);
+            padding: 40px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .node a {
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+
+        .node a:hover {
+            color: var(--neon-green);
+            text-decoration: underline;
+        }
+
+        .label { color: var(--neon-green); font-weight: bold; }
+
     </style>
 </head>
-<body class="overflow-x-hidden selection:bg-neon-green selection:text-black">
+<body>
 
-    <div class="scanline"></div>
+    <div class="system-header">
+        <span>UNIT: PATHOBIOLOGY_LAB_CORE</span>
+        <span>STATUS: ACTIVE_STREAM</span>
+        <span>SYS_VER: 2.0.4</span>
+    </div>
 
-    <!-- UI Overlay Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-black/90 border-b border-neon-green/20 px-6 py-4 flex justify-between items-center backdrop-blur-sm">
-        <div class="flex items-center space-x-3">
-            <div class="w-2 h-2 rounded-full bg-neon-green animate-pulse"></div>
-            <span class="text-[10px] font-bold tracking-[0.3em] text-neon-green">SYSTEM_CORE: LBA_GASTULO</span>
+    <section class="hero">
+        <div class="bio-scan">
+            <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?q=80&w=1000&auto=format&fit=crop" alt="Chromosomal Structure">
+            <div class="scan-line"></div>
         </div>
-        <div class="flex space-x-8 text-[9px] font-bold tracking-widest text-gray-500 uppercase">
-            <a href="#metrics" class="hover:text-neon-green transition-colors">Analytica</a>
-            <a href="#pathobiology" class="hover:text-neon-green transition-colors">Research</a>
-            <a href="#toolkit" class="hover:text-neon-green transition-colors">Matrix</a>
-            <a href="#deployment" class="hover:text-neon-green transition-colors">Timeline</a>
+        <div class="identity-text">
+            <p style="margin:0;">> INITIALIZING_IDENTITY_DATA...</p>
+            <h1>LUCÍA BELÉN ARMAS GÁSTULO</h1>
+            <p class="headline">Advancing Aquatic Health through Pathobiology & Bioinformatics.</p>
+            <p class="status">Erasmus Mundus AquaH Candidate | Ghent University</p>
         </div>
-    </nav>
+    </section>
 
-    <main class="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-20">
-        
-        <!-- HERO / COMMAND ACCESS -->
-        <section class="mb-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-block px-3 py-1 mb-6 border border-neon-green/30 text-[10px] text-neon-green font-bold uppercase tracking-widest bg-neon-green/5">
-                    User Identified: Pathobiology Specialist
-                </div>
-                <h1 class="text-4xl md:text-7xl font-bold mb-8 leading-none tracking-tighter text-white">
-                    Advancing <span class="text-neon-green glow-text italic">Aquatic Health</span> through Pathobiology & Bioinformatics.
-                </h1>
-                <div class="flex items-start gap-4 border-l-2 border-neon-green/50 pl-6 mb-8">
-                    <p class="text-gray-400 text-sm max-w-md">
-                        <span class="text-white font-bold">Incoming Erasmus Mundus Candidate (AquaH)</span>. 
-                        Deployment pending: Ghent University, Belgium. System specialized in Amazonian biodiversity and genomic virulencia analysis.
-                    </p>
-                </div>
-                <div class="flex gap-6">
-                    <div class="text-[10px] font-bold text-neon-green/60">LAT: -12.0464</div>
-                    <div class="text-[10px] font-bold text-neon-green/60">LONG: -77.0428</div>
-                    <div class="text-[10px] font-bold text-neon-green/60">OS: CORE_PATH_V1</div>
-                </div>
-            </div>
+    <div class="section-title">Current_Research_Portfolio</div>
 
-            <!-- Identity Frame (Visual Reference for user) -->
-            <div class="relative flex justify-center">
-                <div class="w-80 h-80 bg-zinc-950 border border-neon-green/40 flex items-center justify-center relative">
-                    <!-- This represents the photo in the interface -->
-                    <div class="absolute inset-4 border border-neon-green/10 flex items-center justify-center">
-                         <i data-lucide="user-search" class="w-16 h-16 text-neon-green/20"></i>
-                    </div>
-                    <div class="absolute top-0 right-0 p-4">
-                        <div class="w-1.5 h-1.5 bg-neon-green rounded-full animate-ping"></div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 p-4 text-[9px] font-bold text-neon-green bg-black">
-                        BIO_SCAN: ACTIVE
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="research-grid">
+        <div class="research-card">
+            <span class="tag">PIPELINE / IN REVIEW</span>
+            <h3>Evolutionary Trajectory of Multi-Drug Evasion in Streptococcus agalactiae</h3>
+            <p>A 17-Year Chromosomal Expansion in the Brazilian Nile Tilapia Industry.</p>
+        </div>
 
-        <!-- PERFORMANCE ANALYTICS (METRICS) -->
-        <section id="metrics" class="mb-40">
-            <div class="flex items-center gap-4 mb-16">
-                <h2 class="text-xs font-bold text-neon-green tracking-[0.4em] uppercase">// Analytical Performance Metrics</h2>
-                <div class="h-[1px] bg-neon-green/20 flex-grow"></div>
-            </div>
+        <div class="research-card">
+            <span class="tag">PIPELINE / IN REVIEW</span>
+            <h3>Antivirulence potential of Phlorofucofuroeckol B</h3>
+            <p>A bioprospecting approach through in silico molecular docking against pore-forming toxins.</p>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Pub Metric -->
-                <div class="neo-border bg-zinc-950 p-10 rounded text-center group">
-                    <div class="chart-container mb-6">
-                        <canvas id="pubChart"></canvas>
-                    </div>
-                    <h3 class="text-white text-lg font-bold mb-2">Q1 Publication</h3>
-                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Reviews in Fisheries Science & Aquaculture</p>
-                </div>
+        <div class="research-card">
+            <span class="tag">PUBLISHED Q1</span>
+            <img src="CAPTUR_PAPER_ISAV.jpg" alt="Paper ISAV Publication">
+            <h3>Infectious Salmon Anemia: Current State of Knowledge Regarding ISAV</h3>
+            <p>Reviews in Fisheries Science & Aquaculture (2025).</p>
+        </div>
 
-                <!-- Capacity Metric -->
-                <div class="neo-border bg-zinc-950 p-10 rounded text-center group">
-                    <div class="chart-container mb-6">
-                        <canvas id="capacityChart"></canvas>
-                    </div>
-                    <h3 class="text-neon-green text-lg font-bold mb-2">+45% Efficiency</h3>
-                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Molecular Diagnostic Pipeline Optimization</p>
-                </div>
+        <div class="research-card">
+            <span class="tag">CONFERENCE / LACQUA25</span>
+            <img src="FOTO_LACQUA_CHILE.jpg" alt="LACQUA25 Chile Poster">
+            <h3>Characterization of Aeromonas Hydrophila Infection and Determination of the LD50 in Colossoma Macropomum</h3>
+            <p>World Aquaculture Society - Puerto Varas, Chile.</p>
+        </div>
 
-                <!-- Risk Metric -->
-                <div class="neo-border bg-zinc-950 p-10 rounded text-center group">
-                    <div class="chart-container mb-6">
-                        <canvas id="riskChart"></canvas>
-                    </div>
-                    <h3 class="text-white text-lg font-bold mb-2">-40% Risk Index</h3>
-                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Biorisk Mitigation during IMARPE Residency</p>
-                </div>
-            </div>
-        </section>
+        <div class="research-card">
+            <span class="tag">SIMPOSIO / SINEMAR</span>
+            <img src="PRESENTACION_SINEMAR.jpg" alt="SINEMAR Presentation">
+            <h3>PROYECTO DE TESIS: "Caracterización de la Infección por Aeromonas hydrophila y Determinación de la DL50-96h en Colossoma Macropomum"</h3>
+        </div>
+    </section>
 
-        <!-- PATHOBIOLOGY RESEARCH HUB -->
-        <section id="pathobiology" class="mb-40">
-            <div class="flex items-center gap-4 mb-16">
-                <h2 class="text-xs font-bold text-neon-green tracking-[0.4em] uppercase">// Research Innovation Hub</h2>
-                <div class="h-[1px] bg-neon-green/20 flex-grow"></div>
-            </div>
+    <div class="section-title">Technical_Experience</div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-1">
-                <!-- Card 1 -->
-                <div class="p-8 bg-zinc-950 border border-neon-green/10 hover:bg-neon-green/5 transition-all">
-                    <div class="text-neon-green mb-6"><i data-lucide="dna" class="w-8 h-8"></i></div>
-                    <h3 class="text-lg font-bold text-white mb-4 uppercase tracking-tighter">Evolutionary Genomics</h3>
-                    <p class="text-sm text-gray-500 leading-relaxed mb-6 italic">
-                        Trajectory of multi-drug evasion in <span class="text-neon-green">Streptococcus agalactiae</span>. Optimization for Nile Tilapia industry.
-                    </p>
-                    <div class="text-[9px] text-gray-700 font-bold uppercase">Field: Virulence Trajectory</div>
-                </div>
+    <section class="experience">
+        <div class="exp-item">
+            <p class="label">// 2024 - CURRENT</p>
+            <h3>Instituto del Mar del Perú (IMARPE)</h3>
+            <p>Aquatic Pathobiology Laboratory Intern. Research in infectious diseases, aquaculture microbiology, and bioinformatic analysis.</p>
+        </div>
+        <div class="exp-item">
+            <p class="label">// TECHNICAL_CORE</p>
+            <h3>Independent Consultancy</h3>
+            <p>Fish Hatchery and Biological Supplies Technician. Management of biological cycles, water quality, and aquatic health protocols.</p>
+        </div>
+    </section>
 
-                <!-- Card 2 -->
-                <div class="p-8 bg-zinc-950 border border-neon-green/10 hover:bg-neon-green/5 transition-all">
-                    <div class="text-neon-green mb-6"><i data-lucide="microscope" class="w-8 h-8"></i></div>
-                    <h3 class="text-lg font-bold text-white mb-4 uppercase tracking-tighter">Bio-prospecting</h3>
-                    <p class="text-sm text-gray-500 leading-relaxed mb-6 italic">
-                        In silico potential of <span class="text-neon-green">Phlorofucofuroeckol B</span> against pore-forming toxins via high-precision molecular docking.
-                    </p>
-                    <div class="text-[9px] text-gray-700 font-bold uppercase">Field: Computational Biology</div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="p-8 bg-zinc-950 border border-neon-green/10 hover:bg-neon-green/5 transition-all">
-                    <div class="text-neon-green mb-6"><i data-lucide="bacteria" class="w-8 h-8"></i></div>
-                    <h3 class="text-lg font-bold text-white mb-4 uppercase tracking-tighter">Pathogen Foundations</h3>
-                    <p class="text-sm text-gray-500 leading-relaxed mb-6 italic">
-                        Infection characterization of <span class="text-neon-green">Aeromonas hydrophila</span> in Amazonian Colossoma macropomum.
-                    </p>
-                    <div class="text-[9px] text-gray-700 font-bold uppercase">Field: Amazonian Health</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TECHNICAL TOOLKIT -->
-        <section id="toolkit" class="mb-40">
-            <div class="flex items-center gap-4 mb-16">
-                <h2 class="text-xs font-bold text-neon-green tracking-[0.4em] uppercase">// Technical Toolkit Matrix</h2>
-                <div class="h-[1px] bg-neon-green/20 flex-grow"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="space-y-6">
-                    <h4 class="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">01. Bioinformatics</h4>
-                    <ul class="space-y-3 text-sm font-bold">
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> AlphaFold Architecture</li>
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> BWA / SPAdes Assembler</li>
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> Molecular Docking Engines</li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h4 class="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">02. Geospatial</h4>
-                    <ul class="space-y-3 text-sm font-bold">
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> QGIS Spatial Analysis</li>
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> NASA ARSET Remote Sensing</li>
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> Water Quality Monitoring</li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h4 class="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">03. Lab Core</h4>
-                    <ul class="space-y-3 text-sm font-bold">
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> Pathobiology & Necropsy</li>
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> Microbiology Protocols</li>
-                        <li class="flex items-center gap-3 text-gray-400"><span class="text-neon-green">></span> AMR Profiling (DTU Cert)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- DEPLOYMENT TIMELINE -->
-        <section id="deployment" class="mb-40">
-            <div class="flex items-center gap-4 mb-16">
-                <h2 class="text-xs font-bold text-neon-green tracking-[0.4em] uppercase">// Deployment Chronology</h2>
-                <div class="h-[1px] bg-neon-green/20 flex-grow"></div>
-            </div>
-
-            <div class="space-y-12">
-                <div class="flex flex-col md:flex-row gap-6 md:gap-20">
-                    <div class="text-[10px] font-bold text-neon-green uppercase w-24">Present</div>
-                    <div class="flex-grow border-l border-neon-green/20 pl-8 pb-8">
-                        <h3 class="text-white font-bold text-lg">Ghent University Admission</h3>
-                        <p class="text-sm text-gray-500 mt-2 italic">Erasmus Mundus Joint Master Degree in Health Management in Aquaculture (AquaH). Specialized focus on Pathobiology.</p>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-6 md:gap-20">
-                    <div class="text-[10px] font-bold text-gray-600 uppercase w-24">2025</div>
-                    <div class="flex-grow border-l border-neon-green/20 pl-8 pb-8">
-                        <h3 class="text-white font-bold text-lg">LACQUA25 Speaker</h3>
-                        <p class="text-sm text-gray-500 mt-2 italic">Puerto Varas, Chile. Scientific presentation on operational milestones and molecular diagnostics.</p>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-6 md:gap-20">
-                    <div class="text-[10px] font-bold text-gray-600 uppercase w-24">Past</div>
-                    <div class="flex-grow border-l border-neon-green/20 pl-8">
-                        <h3 class="text-white font-bold text-lg">IMARPE Residency</h3>
-                        <p class="text-sm text-gray-500 mt-2 italic">Research Intern & GIS Analyst. Infrastructure health monitoring and biosecurity risk evaluation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER TERMINAL -->
-    <footer class="border-t border-neon-green/10 py-20 px-6 bg-zinc-950/50 text-center">
-        <div class="max-w-4xl mx-auto space-y-8">
-            <p class="text-sm font-bold text-gray-400 italic">"Bridging the Amazonian frontier with global aquatic health innovation."</p>
-            
-            <div class="flex justify-center gap-6">
-                <a href="#" class="p-3 border border-neon-green/10 text-neon-green hover:bg-neon-green hover:text-black transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                <a href="#" class="p-3 border border-neon-green/10 text-neon-green hover:bg-neon-green hover:text-black transition-all"><i data-lucide="graduation-cap" class="w-5 h-5"></i></a>
-                <a href="#" class="p-3 border border-neon-green/10 text-neon-green hover:bg-neon-green hover:text-black transition-all"><i data-lucide="microscope" class="w-5 h-5"></i></a>
-                <a href="#" class="p-3 border border-neon-green/10 text-neon-green hover:bg-neon-green hover:text-black transition-all"><i data-lucide="network" class="w-5 h-5"></i></a>
-            </div>
-
-            <div class="text-[9px] text-gray-700 tracking-widest font-bold uppercase">
-                &copy; 2026 // SYSTEM_ACTIVE // ALL RIGHTS RESERVED_
-            </div>
+    <footer id="contact">
+        <div class="node">
+            <span class="label">ORCID:</span><br>
+            <a href="https://orcid.org/0000-0001-6658-3745" target="_blank">0000-0001-6658-3745</a>
+        </div>
+        <div class="node">
+            <span class="label">LINKEDIN:</span><br>
+            <a href="https://linkedin.com/in/lucía-armas-gástulo-33b50629b" target="_blank">linkedin.com/in/lucia-armas-gastulo</a>
+        </div>
+        <div class="node">
+            <span class="label">EMAIL:</span><br>
+            <a href="mailto:armas.gastulo@gmail.com">armas.gastulo@gmail.com</a>
+        </div>
+        <div class="node">
+            <span class="label">LOCATION:</span><br>
+            GHENT, BE / LIMA, PE
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-
-        const chartConfig = (color) => ({
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: { x: { display: false }, y: { display: false } },
-            elements: { arc: { borderWidth: 0 } }
-        });
-
-        // Pub Chart
-        new Chart(document.getElementById('pubChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Q1', 'Base'],
-                datasets: [{
-                    data: [1, 0],
-                    backgroundColor: ['#39FF14', '#062b06'],
-                    cutout: '85%'
-                }]
-            },
-            options: chartConfig()
-        });
-
-        // Capacity Chart
-        new Chart(document.getElementById('capacityChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Gain', 'Base'],
-                datasets: [{
-                    data: [45, 55],
-                    backgroundColor: ['#39FF14', '#062b06'],
-                    cutout: '85%'
-                }]
-            },
-            options: chartConfig()
-        });
-
-        // Risk Chart
-        new Chart(document.getElementById('riskChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Reduction', 'Base'],
-                datasets: [{
-                    data: [40, 60],
-                    backgroundColor: ['#ffffff', '#062b06'],
-                    cutout: '85%'
-                }]
-            },
-            options: chartConfig()
-        });
-    </script>
 </body>
 </html>
