@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUCÍA ARMAS | PATHOBIOLOGY PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>LUCÍA ARMAS | RESEARCH PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         :root {
             --neon-green: #39FF14;
@@ -26,25 +26,26 @@
         /* --- Pixel Shrimp Animation --- */
         .shrimp-pixel {
             position: fixed;
-            font-size: 2rem;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
             z-index: 1000;
             pointer-events: none;
-            filter: drop-shadow(0 0 5px var(--neon-green));
-            animation: swim 15s linear infinite;
+            filter: drop-shadow(0 0 8px var(--neon-green));
+            animation: swim 20s linear infinite;
         }
 
         @keyframes swim {
-            0% { left: -50px; top: 20%; transform: scaleX(1); }
-            45% { left: 100%; top: 50%; transform: scaleX(1); }
-            50% { left: 100%; top: 50%; transform: scaleX(-1); }
+            0% { left: -50px; top: 10%; transform: scaleX(1); }
+            45% { left: 100%; top: 35%; transform: scaleX(1); }
+            50% { left: 100%; top: 35%; transform: scaleX(-1); }
             95% { left: -50px; top: 80%; transform: scaleX(-1); }
-            100% { left: -50px; top: 20%; transform: scaleX(1); }
+            100% { left: -50px; top: 10%; transform: scaleX(1); }
         }
 
         .system-header {
             border-bottom: 1px solid var(--neon-green);
             padding: 10px 20px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             display: flex;
             justify-content: space-between;
         }
@@ -60,7 +61,7 @@
         .bio-scan img {
             width: 100%;
             border: 1px solid var(--neon-green);
-            filter: grayscale(1) sepia(1) hue-rotate(70deg) brightness(1.1);
+            filter: grayscale(1) sepia(1) hue-rotate(70deg) brightness(1.2);
         }
 
         .identity-text h1 { font-size: 2.2rem; margin: 0; letter-spacing: 2px; }
@@ -68,32 +69,40 @@
 
         .section-title {
             background: var(--dark-green);
-            padding: 15px 10%;
+            padding: 12px 10%;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-top: 40px;
+            margin-top: 30px;
+            font-size: 0.8rem;
         }
 
         .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            padding: 30px 10%;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 25px 10%;
         }
 
         .card {
             border: 1px solid var(--neon-green);
-            padding: 20px;
+            padding: 15px;
             background: rgba(6, 43, 6, 0.1);
+            position: relative;
         }
 
-        .card img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 15px; border: 1px solid var(--neon-green); }
+        .card img { width: 100%; height: 160px; object-fit: cover; margin-bottom: 15px; border: 1px solid var(--neon-green); }
 
-        i { font-style: italic; } /* Científicamente correcto */
+        i { font-style: italic; }
 
-        .award-icon { font-size: 1.5rem; display: block; margin-bottom: 5px; }
+        .pixel-icon { 
+            font-family: 'Press Start 2P', cursive; 
+            font-size: 0.7rem; 
+            color: gold;
+            margin-bottom: 10px;
+            display: block;
+        }
 
-        footer { border-top: 1px solid var(--neon-green); padding: 40px 10%; font-size: 0.8rem; }
+        footer { border-top: 1px solid var(--neon-green); padding: 30px 10%; font-size: 0.8rem; }
         .node a { color: white; text-decoration: none; border-bottom: 1px solid var(--neon-green); }
 
     </style>
@@ -103,18 +112,18 @@
     <div class="shrimp-pixel">🦐</div>
 
     <div class="system-header">
-        <span>CORE_LOG: ARMAS_GASTULO_PORTFOLIO</span>
-        <span>LANG: EN_US</span>
-        <span>STATUS: VERIFIED</span>
+        <span>CORE_LOG: ARMAS_G_PORTFOLIO</span>
+        <span>AUTH: ANALYST_ACCESS</span>
+        <span>STATUS: STABLE</span>
     </div>
 
     <section class="hero">
         <div class="bio-scan">
-            <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=1000" alt="Scientific Fish Illustration">
+            <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=1000" alt="Ictiology Diagram">
         </div>
         <div class="identity-text">
-            <p>> INITIALIZING_BIO_DATA...</p>
-            <h1>LUCÍA BELÉN ARMAS GÁSTULO</h1>
+            <p>> ACCESSING_TERMINAL_01...</p>
+            <h1>LUCÍA ARMAS GÁSTULO</h1>
             <p class="headline">Advancing Aquatic Health through Pathobiology & Bioinformatics.</p>
             <p>Erasmus Mundus AquaH Candidate | Ghent University</p>
         </div>
@@ -123,21 +132,21 @@
     <div class="section-title">01_Publications</div>
     <section class="content-grid">
         <div class="card">
-            <span style="font-size: 0.7rem;">[Q1 JOURNAL]</span>
+            <span style="font-size: 0.7rem; color: var(--neon-green);">[Q1 JOURNAL]</span>
             <h3>Infectious Salmon Anemia: The Current State of Knowledge Regarding ISAV</h3>
-            <p>Engert, C. J., Armas-Gástulo, L., & Yunis-Aguinaga, J. (2025). <i>Reviews in Fisheries Science & Aquaculture</i>.</p>
+            <p>Engert, C. J., <b>Armas-Gástulo, L.</b>, & Yunis-Aguinaga, J. (2025). <i>Reviews in Fisheries Science & Aquaculture</i>.</p>
         </div>
     </section>
 
     <div class="section-title">02_Current_Research</div>
     <section class="content-grid">
         <div class="card">
-            <img src="evolutionary_project.jpg" alt="Evolutionary Analysis">
+            <img src="research_01.jpg" alt="Evolutionary Analysis">
             <h3>Evolutionary Trajectory of Multi-Drug Evasion in <i>Streptococcus agalactiae</i></h3>
             <p>A 17-Year Chromosomal Expansion in the Brazilian Nile Tilapia Industry.</p>
         </div>
         <div class="card">
-            <img src="antivirulence_docking.jpg" alt="Molecular Docking">
+            <img src="research_02.jpg" alt="Molecular Docking">
             <h3>Antivirulence potential of Phlorofucofuroeckol B against pore-forming toxins</h3>
             <p>A bioprospecting approach through <i>in silico</i> molecular docking.</p>
         </div>
@@ -146,12 +155,10 @@
     <div class="section-title">03_Scientific_Conferences</div>
     <section class="content-grid">
         <div class="card">
-            <img src="lacqua_photo.jpg" alt="LACQUA25 Chile">
             <h3>LACQUA25 - Puerto Varas, Chile</h3>
             <p>Characterization of <i>Aeromonas hydrophila</i> Infection and Determination of the LD50 in <i>Colossoma macropomum</i>.</p>
         </div>
         <div class="card">
-            <img src="sinemar_presentation.jpg" alt="SINEMAR Lima">
             <h3>SINEMAR - Lima, Peru</h3>
             <p>Thesis Project: "Characterization of <i>Aeromonas hydrophila</i> Infection and Determination of the LD50-96h in <i>Colossoma macropomum</i>".</p>
         </div>
@@ -162,23 +169,24 @@
         <div class="card">
             <p class="label">[01/2023 - 08/2023]</p>
             <h3>Instituto del Mar del Perú (IMARPE)</h3>
-            <p>Aquatic Pathobiology Laboratory Intern. Investigation of infectious diseases and molecular diagnostics.</p>
+            <p>Aquatic Pathobiology Laboratory Intern. Focused on molecular diagnostics and microbiological assays.</p>
         </div>
         <div class="card">
             <p class="label">[2020 - 2024]</p>
             <h3>Fish Hatchery and Biological Supplies Technician</h3>
-            <p>Independent Consultancy. Biological cycle control and water quality optimization.</p>
+            <p>Independent Consultancy. Optimization of hatchery biological cycles and water quality management.</p>
         </div>
     </section>
 
     <div class="section-title">05_Courses_and_Training</div>
     <section class="content-grid">
         <div class="card">
-            <ul>
-                <li>Monitoring Water Quality (NASA - ARSET)</li>
+            <ul style="padding-left: 15px; font-size: 0.9rem;">
+                <li>Monitoring Water Quality in Lakes and Coastal Regions (NASA - ARSET)</li>
                 <li>Emergency Preparedness For Aquatic Disease Outbreaks (FAO)</li>
-                <li>Antimicrobial Resistance (DTU)</li>
-                <li>Epidemics: Dynamics of Infectious Diseases (Penn State)</li>
+                <li>Antimicrobial Resistance: Theory and Methods (DTU)</li>
+                <li>Bioinformatics for Pathogen Surveillance (BV-BRC)</li>
+                <li>Epidemics: The Dynamics of Infectious Diseases (Penn State)</li>
             </ul>
         </div>
     </section>
@@ -186,29 +194,38 @@
     <div class="section-title">06_Awards</div>
     <section class="content-grid">
         <div class="card">
-            <span class="award-icon">🏆</span>
+            <span class="pixel-icon">[*] TROPHY</span>
             <h3>3rd Place - Best Oral Presentation</h3>
             <p>V Marine Biology Symposium - UCSUR [2023]</p>
         </div>
         <div class="card">
-            <span class="award-icon">🏆</span>
+            <span class="pixel-icon">[*] TROPHY</span>
             <h3>Cabieses Scholarship</h3>
             <p>Scientific Research Grant [2022]</p>
         </div>
         <div class="card">
-            <span class="award-icon">🏆</span>
+            <span class="pixel-icon">[*] TROPHY</span>
             <h3>Thesis Funding Award</h3>
             <p>PROCIENCIA - CONCYTEC [2022]</p>
         </div>
     </section>
 
+    <div class="section-title">07_Technological_Projects</div>
+    <section class="content-grid">
+        <div class="card">
+            <span class="pixel-icon">[*] EXECUTING...</span>
+            <h3>SoilAnalytica Pro</h3>
+            <p>Implementation of advanced remote sensing protocols for environmental monitoring and soil composition analysis.</p>
+        </div>
+    </section>
+
     <footer>
         <div class="node">
-            <span class="label">ORCID:</span><br>
+            <span class="label">ORCID_ID:</span><br>
             <a href="https://orcid.org/0000-0001-6658-3745" target="_blank">0000-0001-6658-3745</a>
         </div>
         <div class="node">
-            <span class="label">LINKEDIN:</span><br>
+            <span class="label">LINKEDIN_NODE:</span><br>
             <a href="https://linkedin.com/in/lucía-armas-gástulo-33b50629b" target="_blank">linkedin.com/in/lucia-armas-gastulo</a>
         </div>
     </footer>
