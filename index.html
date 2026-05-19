@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUCÍA ARMAS | RESEARCH PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --neon-green: #39FF14;
@@ -26,8 +26,7 @@
         /* --- Pixel Shrimp Animation --- */
         .shrimp-pixel {
             position: fixed;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             z-index: 1000;
             pointer-events: none;
             filter: drop-shadow(0 0 8px var(--neon-green));
@@ -35,11 +34,11 @@
         }
 
         @keyframes swim {
-            0% { left: -50px; top: 10%; transform: scaleX(1); }
-            45% { left: 100%; top: 35%; transform: scaleX(1); }
-            50% { left: 100%; top: 35%; transform: scaleX(-1); }
+            0% { left: -50px; top: 15%; transform: scaleX(1); }
+            45% { left: 100%; top: 40%; transform: scaleX(1); }
+            50% { left: 100%; top: 40%; transform: scaleX(-1); }
             95% { left: -50px; top: 80%; transform: scaleX(-1); }
-            100% { left: -50px; top: 10%; transform: scaleX(1); }
+            100% { left: -50px; top: 15%; transform: scaleX(1); }
         }
 
         .system-header {
@@ -85,21 +84,23 @@
 
         .card {
             border: 1px solid var(--neon-green);
-            padding: 15px;
+            padding: 20px;
             background: rgba(6, 43, 6, 0.1);
-            position: relative;
         }
 
         .card img { width: 100%; height: 160px; object-fit: cover; margin-bottom: 15px; border: 1px solid var(--neon-green); }
 
         i { font-style: italic; }
 
-        .pixel-icon { 
-            font-family: 'Press Start 2P', cursive; 
-            font-size: 0.7rem; 
-            color: gold;
-            margin-bottom: 10px;
-            display: block;
+        .award-icon { font-size: 1.5rem; margin-bottom: 10px; display: block; }
+
+        .skills-tag {
+            font-size: 0.7rem;
+            color: white;
+            background: var(--dark-green);
+            padding: 2px 6px;
+            margin-right: 5px;
+            border: 1px solid var(--neon-green);
         }
 
         footer { border-top: 1px solid var(--neon-green); padding: 30px 10%; font-size: 0.8rem; }
@@ -113,8 +114,8 @@
 
     <div class="system-header">
         <span>CORE_LOG: ARMAS_G_PORTFOLIO</span>
-        <span>AUTH: ANALYST_ACCESS</span>
-        <span>STATUS: STABLE</span>
+        <span>SYS_STATUS: OPTIMIZED</span>
+        <span>LOCATION: LIMA / GHENT</span>
     </div>
 
     <section class="hero">
@@ -122,7 +123,7 @@
             <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=1000" alt="Ictiology Diagram">
         </div>
         <div class="identity-text">
-            <p>> ACCESSING_TERMINAL_01...</p>
+            <p>> BOOTING_RESEARCHER_PROFILE...</p>
             <h1>LUCÍA ARMAS GÁSTULO</h1>
             <p class="headline">Advancing Aquatic Health through Pathobiology & Bioinformatics.</p>
             <p>Erasmus Mundus AquaH Candidate | Ghent University</p>
@@ -174,19 +175,21 @@
         <div class="card">
             <p class="label">[2020 - 2024]</p>
             <h3>Fish Hatchery and Biological Supplies Technician</h3>
-            <p>Independent Consultancy. Optimization of hatchery biological cycles and water quality management.</p>
+            <p>Independent Consultancy. Optimization of biological cycles and aquatic health monitoring.</p>
         </div>
     </section>
 
     <div class="section-title">05_Courses_and_Training</div>
     <section class="content-grid">
         <div class="card">
-            <ul style="padding-left: 15px; font-size: 0.9rem;">
-                <li>Monitoring Water Quality in Lakes and Coastal Regions (NASA - ARSET)</li>
-                <li>Emergency Preparedness For Aquatic Disease Outbreaks (FAO)</li>
-                <li>Antimicrobial Resistance: Theory and Methods (DTU)</li>
-                <li>Bioinformatics for Pathogen Surveillance (BV-BRC)</li>
-                <li>Epidemics: The Dynamics of Infectious Diseases (Penn State)</li>
+            <ul style="padding-left: 15px; font-size: 0.85rem; list-style-type: '>> ';">
+                <li><b>Monitoring Water Quality in Lakes and Coastal Regions Using STREAM</b> (NASA - ARSET)</li>
+                <li><b>Emergency Preparedness For Aquatic Disease Outbreaks</b> (FAO)</li>
+                <li><b>Joint Risk Assessment: One Health (CP11)</b> (World Organisation for Animal Health - WOAH)</li>
+                <li><b>Antimicrobial Resistance: Theory and Methods</b> (Technical University of Denmark - DTU)</li>
+                <li><b>Developing Aquaculture Co-Management Systems</b> (FAO)</li>
+                <li><b>Responsible Conduct Of Research</b> (CITI Program)</li>
+                <li><b>Epidemics: The Dynamics of Infectious Diseases</b> (The Pennsylvania State University)</li>
             </ul>
         </div>
     </section>
@@ -194,17 +197,17 @@
     <div class="section-title">06_Awards</div>
     <section class="content-grid">
         <div class="card">
-            <span class="pixel-icon">[*] TROPHY</span>
+            <span class="award-icon">🏆</span>
             <h3>3rd Place - Best Oral Presentation</h3>
             <p>V Marine Biology Symposium - UCSUR [2023]</p>
         </div>
         <div class="card">
-            <span class="pixel-icon">[*] TROPHY</span>
+            <span class="award-icon">🏆</span>
             <h3>Cabieses Scholarship</h3>
             <p>Scientific Research Grant [2022]</p>
         </div>
         <div class="card">
-            <span class="pixel-icon">[*] TROPHY</span>
+            <span class="award-icon">🏆</span>
             <h3>Thesis Funding Award</h3>
             <p>PROCIENCIA - CONCYTEC [2022]</p>
         </div>
@@ -213,19 +216,28 @@
     <div class="section-title">07_Technological_Projects</div>
     <section class="content-grid">
         <div class="card">
-            <span class="pixel-icon">[*] EXECUTING...</span>
-            <h3>SoilAnalytica Pro</h3>
-            <p>Implementation of advanced remote sensing protocols for environmental monitoring and soil composition analysis.</p>
+            <div style="margin-bottom:10px;">
+                <span class="skills-tag">Computer Vision</span>
+                <span class="skills-tag">Python</span>
+                <span class="skills-tag">Cyberdeck</span>
+            </div>
+            <h3>SoilAnalytica Pro | Lead Developer</h3>
+            <p style="font-size: 0.85rem;">
+                • <b>Computer Vision:</b> OpenCV implementation for radial chromatogram detection, sample normalization, and texture pattern extraction.<br>
+                • <b>Statistical Analysis:</b> Python (Scipy/Numpy) models to quantify soil health via autocorrelation and gray intensity profiling.<br>
+                • <b>Field UX/UI:</b> Streamlit interface optimized for portable hardware (Cyberdeck), enabling real-time offline agronomic diagnostics.<br>
+                • <b>Results:</b> Automation of soil diagnosis, reducing human error in visual interpretation and enabling data-driven biological recommendations.
+            </p>
         </div>
     </section>
 
     <footer>
         <div class="node">
-            <span class="label">ORCID_ID:</span><br>
+            <span class="label">ORCID:</span><br>
             <a href="https://orcid.org/0000-0001-6658-3745" target="_blank">0000-0001-6658-3745</a>
         </div>
         <div class="node">
-            <span class="label">LINKEDIN_NODE:</span><br>
+            <span class="label">LINKEDIN:</span><br>
             <a href="https://linkedin.com/in/lucía-armas-gástulo-33b50629b" target="_blank">linkedin.com/in/lucia-armas-gastulo</a>
         </div>
     </footer>
