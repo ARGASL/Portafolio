@@ -10,6 +10,7 @@
             --neon-green: #39FF14;
             --dark-green: #062b06;
             --bg-black: #000000;
+            --text-gray: #a8a8a8;
         }
 
         body {
@@ -63,7 +64,8 @@
         }
 
         .identity-text h1 { font-size: 2.2rem; margin: 0; letter-spacing: 2px; }
-        .headline { font-size: 1.1rem; color: white; border-left: 3px solid var(--neon-green); padding-left: 15px; margin: 20px 0; }
+        .job-title { color: white; font-weight: bold; font-size: 1.2rem; margin: 5px 0; display: block; }
+        .headline { font-size: 1rem; color: var(--text-gray); border-left: 3px solid var(--neon-green); padding-left: 15px; margin: 20px 0; }
 
         .section-title {
             background: var(--dark-green);
@@ -87,7 +89,7 @@
             background: rgba(6, 43, 6, 0.1);
         }
 
-        .card img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 15px; border: 1px solid var(--neon-green); }
+        .card img { width: 100%; height: auto; max-height: 250px; object-fit: contain; margin-bottom: 15px; border: 1px solid var(--neon-green); }
 
         .skills-tag {
             font-size: 0.7rem;
@@ -108,19 +110,20 @@
 
     <div class="system-header">
         <span>CORE_LOG: ARMAS_G_PORTFOLIO</span>
-        <span>SYS_STATUS: OPTIMIZED</span>
-        <span>LOCATION: LIMA / GHENT</span>
+        <span>SYS_STATUS: ONLINE</span>
+        <span>AUTH: MARINE_BIOLOGIST_LEVEL_6</span>
     </div>
 
     <section class="hero">
         <div class="bio-scan">
-            <img src="argas1.jpg" alt="Profile Caratula">
+            <img src="argas1.png" alt="Lucía Armas Profile">
         </div>
         <div class="identity-text">
             <p>> BOOTING_RESEARCHER_PROFILE...</p>
             <h1>LUCÍA ARMAS GÁSTULO</h1>
+            <span class="job-title">Marine Biologist</span>
             <p class="headline">Advancing Aquatic Health through Pathobiology & Bioinformatics.</p>
-            <p>Erasmus Mundus AquaH Candidate | Ghent University</p>
+            <p>Incoming Erasmus Mundus AquaH Student | Ghent University</p>
         </div>
     </section>
 
@@ -136,12 +139,12 @@
     <div class="section-title">02_Current_Research</div>
     <section class="content-grid">
         <div class="card">
-            <img src="argas2.jpg" alt="Evolutionary Analysis">
+            <img src="argas2.PNG" alt="Evolutionary Trajectory Analysis">
             <h3>Evolutionary Trajectory of Multi-Drug Evasion in <i>Streptococcus agalactiae</i></h3>
             <p>A 17-Year Chromosomal Expansion in the Brazilian Nile Tilapia Industry.</p>
         </div>
         <div class="card">
-            <img src="argas3.jpg" alt="Molecular Docking">
+            <img src="argas3.png" alt="Molecular Docking Visualization">
             <h3>Antivirulence potential of Phlorofucofuroeckol B against pore-forming toxins</h3>
             <p>A bioprospecting approach through <i>in silico</i> molecular docking.</p>
         </div>
@@ -150,101 +153,39 @@
     <div class="section-title">03_Scientific_Conferences</div>
     <section class="content-grid">
         <div class="card">
-            <img src="argas4.jpg" alt="LACQUA25 Poster">
+            <img src="argas4.png" alt="LACQUA25 Poster Presentation">
             <h3>LACQUA25 - Puerto Varas, Chile</h3>
             <p>Characterization of <i>Aeromonas hydrophila</i> Infection and Determination of the LD50 in <i>Colossoma macropomum</i>.</p>
         </div>
         <div class="card">
-            <img src="argas5.jpg" alt="SINEMAR Presentation">
+            <img src="argas5.png" alt="SINEMAR Presentation Slide">
             <h3>SINEMAR - Lima, Peru</h3>
             <p>Thesis Project: "Characterization of <i>Aeromonas hydrophila</i> Infection and Determination of the LD50-96h in <i>Colossoma macropomum</i>".</p>
         </div>
     </section>
 
-    <div class="section-title">04_Technical_Experience</div>
-    <section class="content-grid">
-        <div class="card">
-            <p class="label">[01/2023 - 08/2023]</p>
-            <h3>Instituto del Mar del Perú (IMARPE)</h3>
-            <p>Aquatic Pathobiology Laboratory Intern[cite: 42]. Focused on molecular diagnostics and microbiological assays[cite: 42].</p>
-        </div>
-        <div class="card">
-            <p class="label">[2020 - 2024]</p>
-            <h3>Fish Hatchery and Biological Supplies Technician</h3>
-            <p>Independent Consultancy[cite: 42]. Optimization of biological cycles and aquatic health monitoring[cite: 42].</p>
-        </div>
-    </section>
-
-    <div class="section-title">05_Courses_and_Training</div>
+    <div class="section-title">04_Technical_Training</div>
     <section class="content-grid">
         <div class="card">
             <ul style="padding-left: 15px; font-size: 0.85rem; list-style-type: '>> ';">
-                <li><b>Monitoring Water Quality in Lakes and Coastal Regions</b> (NASA - ARSET) [cite: 17]</li>
-                <li><b>Emergency Preparedness For Aquatic Disease Outbreaks</b> (FAO) [cite: 20]</li>
-                <li><b>Joint Risk Assessment: One Health (CP11)</b> (WOAH) [cite: 29]</li>
-                <li><b>Antimicrobial Resistance: Theory and Methods</b> (DTU) [cite: 26]</li>
-                <li><b>Developing Aquaculture Co-Management Systems</b> (FAO) [cite: 28]</li>
-                <li><b>Responsible Conduct Of Research</b> (CITI Program) [cite: 23]</li>
-                <li><b>Epidemics: The Dynamics of Infectious Diseases</b> (Penn State) [cite: 31]</li>
+                <li><b>Monitoring Water Quality in Lakes & Coastal Regions</b> (NASA - ARSET, 2026)</li>
+                <li><b>Emergency Preparedness For Aquatic Disease Outbreaks</b> (FAO, 2026)</li>
+                <li><b>Joint Risk Assessment: One Health (CP11)</b> (WOAH, 2025)</li>
+                <li><b>Antimicrobial Resistance: Theory and Methods</b> (DTU, 2025)</li>
+                <li><b>Responsible Conduct Of Research</b> (CITI Program, 2025)</li>
+                <li><b>Epidemics: The Dynamics of Infectious Diseases</b> (Penn State, 2024)</li>
             </ul>
         </div>
     </section>
 
-    <div class="section-title">06_Awards</div>
+    <div class="section-title">05_Awards</div>
     <section class="content-grid">
         <div class="card">
             <span style="font-size: 1.5rem;">🏆</span>
             <h3>3rd Place - Best Oral Presentation</h3>
-            <p>V Marine Biology Symposium - UCSUR [cite: 42]</p>
+            <p>V Marine Biology Symposium - UCSUR [2023]</p>
         </div>
         <div class="card">
             <span style="font-size: 1.5rem;">🏆</span>
             <h3>Cabieses Scholarship</h3>
-            <p>Scientific Research Grant [cite: 42]</p>
-        </div>
-        <div class="card">
-            <span style="font-size: 1.5rem;">🏆</span>
-            <h3>Thesis Funding Award</h3>
-            <p>PROCIENCIA - CONCYTEC [cite: 42]</p>
-        </div>
-    </section>
-
-    <div class="section-title">07_Technological_Projects</div>
-    <section class="content-grid">
-        <div class="card">
-            <img src="argas6.jpg" alt="SoilAnalytica Interface">
-            <div style="margin-top:10px;">
-                <span class="skills-tag">Computer Vision</span>
-                <span class="skills-tag">Python</span>
-            </div>
-            <h3>SoilAnalytica Pro | Lead Developer</h3>
-            <p style="font-size: 0.85rem;">
-                Implementation of OpenCV for radial chromatogram detection and Scipy models for soil health quantification.
-            </p>
-        </div>
-        <div class="card">
-            <img src="argas7.jpg" alt="Cyberdeck Hardware">
-            <div style="margin-top:10px;">
-                <span class="skills-tag">Hardware</span>
-                <span class="skills-tag">Ubuntu</span>
-            </div>
-            <h3>Cyberdeck Deployment</h3>
-            <p style="font-size: 0.85rem;">
-                Design of interactive interfaces in Streamlit optimized for portable hardware, enabling real-time agronomic diagnostics.
-            </p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="node">
-            <span class="label">ORCID:</span><br>
-            <a href="https://orcid.org/0000-0001-6658-3745" target="_blank">0000-0001-6658-3745</a>
-        </div>
-        <div class="node">
-            <span class="label">LINKEDIN:</span><br>
-            <a href="https://linkedin.com/in/lucía-armas-gástulo-33b50629b" target="_blank">linkedin.com/in/lucia-armas-gastulo</a> [cite: 44]
-        </div>
-    </footer>
-
-</body>
-</html>
+            <p
