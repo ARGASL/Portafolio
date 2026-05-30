@@ -14,12 +14,22 @@
 
         body {
             background-color: var(--bg-black);
-            color: var(--neon-green);
+            color: #ffffff;
             font-family: 'Space Mono', monospace;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* --- Títulos y Resaltados en Verde --- */
+        h1, h2, h3, .section-title, .job-title, .label, .system-header span, .skills-tag, .highlight-green {
+            color: var(--neon-green) !important;
+        }
+
+        /* --- Texto Descriptivo en Blanco --- */
+        p, li, .headline {
+            color: #ffffff;
         }
 
         /* --- Pixel Shrimp Animation --- */
@@ -56,14 +66,25 @@
             align-items: center;
         }
 
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 40px 5%;
+                text-align: center;
+            }
+            .identity-text h1 { font-size: 1.8rem; }
+            .job-title { margin: 10px auto; }
+            .headline { border-left: none; border-top: 3px solid var(--neon-green); padding: 15px 0 0 0; }
+        }
+
         .bio-scan img {
             width: 100%;
             border: 1px solid var(--neon-green);
         }
 
         .identity-text h1 { font-size: 2.2rem; margin: 0; letter-spacing: 2px; }
-        .job-title { color: white; font-weight: bold; font-size: 1.3rem; margin: 5px 0; display: block; border-bottom: 1px solid var(--neon-green); width: fit-content; }
-        .headline { font-size: 1.1rem; color: #fff; border-left: 3px solid var(--neon-green); padding-left: 15px; margin: 20px 0; }
+        .job-title { font-weight: bold; font-size: 1.3rem; margin: 5px 0; display: block; border-bottom: 1px solid var(--neon-green); width: fit-content; }
+        .headline { font-size: 1.1rem; border-left: 3px solid var(--neon-green); padding-left: 15px; margin: 20px 0; text-align: left; }
 
         .section-title {
             background: var(--dark-green);
@@ -72,11 +93,13 @@
             letter-spacing: 3px;
             margin-top: 30px;
             font-size: 0.8rem;
+            border-top: 1px solid var(--neon-green);
+            border-bottom: 1px solid var(--neon-green);
         }
 
         .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             padding: 25px 10%;
         }
@@ -89,24 +112,31 @@
 
         .card img { width: 100%; height: auto; border: 1px solid var(--neon-green); margin-bottom: 15px; }
 
-        .card-sinemar {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
         .skills-tag {
             font-size: 0.7rem;
-            color: white;
             background: var(--dark-green);
             padding: 2px 6px;
             margin-right: 5px;
             border: 1px solid var(--neon-green);
         }
 
-        footer { border-top: 1px solid var(--neon-green); padding: 30px 10%; font-size: 0.8rem; display: flex; flex-wrap: wrap; gap: 30px; }
-        .node a { color: white; text-decoration: none; border-bottom: 1px solid var(--neon-green); }
-        .label { color: var(--neon-green); font-weight: bold; font-size: 0.7rem; }
+        .btn-link {
+            display: inline-block; 
+            margin-top: 10px; 
+            padding: 6px 12px; 
+            border: 1px solid var(--neon-green); 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 0.7rem; 
+            background: var(--dark-green);
+        }
+        
+        .btn-link:hover {
+            background: var(--neon-green);
+            color: var(--bg-black);
+        }
+
+        footer { border-top: 1px solid var(--neon-green); padding: 30px 10%; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -128,14 +158,14 @@
             <h1>LUCÍA ARMAS GÁSTULO</h1>
             <span class="job-title">Marine Biologist</span>
             <p class="headline">Advancing Aquatic Health through Pathobiology & Bioinformatics.</p>
-            <p>Erasmus Mundus AquaH Candidate | Ghent University</p>
+            <p class="highlight-green";">Erasmus Mundus AquaH Candidate | Ghent University</p>
         </div>
     </section>
 
     <div class="section-title">01_Publications</div>
     <section class="content-grid">
         <div class="card">
-            <span style="font-size: 0.7rem; color: var(--neon-green);">[Q1 JOURNAL]</span>
+            <span style="font-size: 0.7rem; color: var(--neon-green); font-weight: bold;">[Q1 JOURNAL]</span>
             <h3>Infectious Salmon Anemia: The Current State of Knowledge Regarding ISAV</h3>
             <p>Engert, C. J., <b>Armas-Gástulo, L.</b>, & Yunis-Aguinaga, J. (2025). <i>Reviews in Fisheries Science & Aquaculture</i>.</p>
         </div>
@@ -162,27 +192,33 @@
             <h3>LACQUA25 - Puerto Varas, Chile</h3>
             <p>Characterization of <i>Aeromonas hydrophila</i> Infection and Determination of the LD50 in <i>Colossoma macropomum</i>.</p>
         </div>
-        <div class="card card-sinemar">
+        <div class="card">
             <img src="argas5.jpg" alt="SINEMAR Title">
-            <img src="argasX.jpg" alt="SINEMAR Detail">
             <h3>SINEMAR - Lima, Peru</h3>
             <p>Thesis Project: "Characterization of <i>Aeromonas hydrophila</i> Infection and Determination of the LD50-96h in <i>Colossoma macropomum</i>".</p>
         </div>
     </section>
 
     <div class="section-title">04_Courses_and_Training</div>
-    <section class="content-grid">
-        <div class="card">
-            <ul style="padding-left: 15px; font-size: 0.85rem; list-style-type: '>> ';">
-                <li><b>Monitoring Water Quality in Lakes & Coastal Regions</b> (NASA - ARSET, 2026)</li>
-                <li><b>Emergency Preparedness For Aquatic Disease Outbreaks</b> (FAO, 2026)</li>
-                <li><b>Joint Risk Assessment: One Health (CP11)</b> (WOAH, 2025)</li>
-                <li><b>Antimicrobial Resistance: Theory and Methods</b> (DTU, 2025)</li>
-                <li><b>Responsible Conduct Of Research</b> (CITI Program, 2025)</li>
-                <li><b>Epidemics: The Dynamics of Infectious Diseases</b> (Penn State, 2024)</li>
-            </ul>
-        </div>
-    </section>
+<section class="content-grid">
+    <div class="card">
+        <ul style="padding-left: 15px; font-size: 0.85rem; list-style: none;">
+
+            <li><span class="highlight-green">>></span> Monitoring Water Quality in Lakes & Coastal Regions <span class="highlight-green">(NASA - ARSET, 2026)</span></li>
+
+            <li><span class="highlight-green">>></span> Emergency Preparedness For Aquatic Disease Outbreaks <span class="highlight-green">(FAO, 2026)</span></li>
+
+            <li><span class="highlight-green">>></span> Joint Risk Assessment: One Health (CP11) <span class="highlight-green">(WOAH, 2025)</span></li>
+
+            <li><span class="highlight-green">>></span> Antimicrobial Resistance: Theory and Methods <span class="highlight-green">(DTU, 2025)</span></li>
+
+            <li><span class="highlight-green">>></span> Responsible Conduct Of Research <span class="highlight-green">(CITI Program, 2025)</span></li>
+
+            <li><span class="highlight-green">>></span> Epidemics: The Dynamics of Infectious Diseases <span class="highlight-green">(Penn State, 2024)</span></li>
+
+        </ul>
+    </div>
+</section>
 
     <div class="section-title">05_Awards</div>
     <section class="content-grid">
@@ -191,21 +227,18 @@
         <div class="card"><span style="font-size:1.5rem">🏆</span><h3>Thesis Funding Award</h3><p>PROCIENCIA - CONCYTEC [2022]</p></div>
     </section>
 
-   <div class="section-title">06_Technological_Projects</div>
+    <div class="section-title">06_Technological_Projects</div>
     <section class="content-grid">
         <div class="card">
             <img src="argas6.jpg" alt="SoilAnalytica">
             <div style="margin-bottom:10px;"><span class="skills-tag">Computer Vision</span><span class="skills-tag">Python</span></div>
             <h3>SoilAnalytica Pro | Lead Developer</h3>
             <p style="font-size: 0.8rem;">
-                • <b>Computer Vision:</b> OpenCV implementation for radial chromatogram detection and texture pattern extraction.<br>
-                • <b>Statistical Analysis:</b> Scipy/Numpy models to quantify soil health via gray intensity profiling.<br>
-                • <b>UX/UI:</b> Streamlit interface optimized for Cyberdeck (Ubuntu) for real-time offline diagnostics.
+                • <b class="highlight-green">Computer Vision:</b> OpenCV implementation for radial chromatogram detection and texture pattern extraction.<br>
+                • <b class="highlight-green">Statistical Analysis:</b> Scipy/Numpy models to quantify soil health via gray intensity profiling.<br>
+                • <b class="highlight-green">UX/UI:</b> Streamlit interface optimized for Cyberdeck (Ubuntu) for real-time offline diagnostics.
             </p>
-            
-            <a href="https://soilanalytica-pro.streamlit.app/" target="_blank" style="display: inline-block; margin-top: 10px; padding: 6px 12px; border: 1px solid var(--neon-green); color: white; text-decoration: none; font-size: 0.7rem; background: var(--dark-green); font-family: 'Space Mono', monospace;">
-                > DEPLOY_APP_DEMO
-            </a>
+            <a href="https://soilanalytica-pro.streamlit.app/" target="_blank" class="btn-link"> > DEPLOY_APP_DEMO </a>
         </div>
 
         <div class="card">
@@ -218,27 +251,16 @@
         </div>
     </section>
 
- <footer>
+    <footer>
         <div class="node">
             <span class="label">CONTACT_CHANNELS:</span><br>
-            <div style="margin-top: 10px;">
-                <p style="color: white; font-size: 0.8rem; margin-bottom: 15px;">
-                    <span style="color: var(--neon-green)">EMAIL:</span> armas.gastulo@gmail.com
-                </p>
-
-                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                    <a href="https://www.linkedin.com/in/luc%C3%ADa-armas-g%C3%A1stulo-33b50629b/" target="_blank" style="display: inline-block; padding: 6px 12px; border: 1px solid var(--neon-green); color: white; text-decoration: none; font-size: 0.7rem; background: var(--dark-green); font-family: 'Space Mono', monospace;">
-                        > LINKEDIN_PROFILE
-                    </a>
-
-                    <a href="https://orcid.org/0000-0001-6658-3745" target="_blank" style="display: inline-block; padding: 6px 12px; border: 1px solid var(--neon-green); color: white; text-decoration: none; font-size: 0.7rem; background: var(--dark-green); font-family: 'Space Mono', monospace;">
-                        > ORCID_ID
-                    </a>
-
-                    <a href="https://github.com/argasl" target="_blank" style="display: inline-block; padding: 6px 12px; border: 1px solid var(--neon-green); color: white; text-decoration: none; font-size: 0.7rem; background: var(--dark-green); font-family: 'Space Mono', monospace;">
-                        > GITHUB_ROOT
-                    </a>
-                </div>
+            <p style="font-size: 0.8rem;">
+                <span class="highlight-green">EMAIL:</span> armas.gastulo@gmail.com
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <a href="https://www.linkedin.com/in/luc%C3%ADa-armas-g%C3%A1stulo-33b50629b/" target="_blank" class="btn-link"> > LINKEDIN </a>
+                <a href="https://orcid.org/0000-0001-6658-3745" target="_blank" class="btn-link"> > ORCID </a>
+                <a href="https://github.com/argasl" target="_blank" class="btn-link"> > GITHUB </a>
             </div>
         </div>
     </footer>
